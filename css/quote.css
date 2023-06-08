@@ -4,7 +4,7 @@
 *************
 */
 .container_24{
-	/*background: #bebebe;*/
+/*	background: #bebebe;*/
 	font-family: helvetica, futura, arial;
 	font-size: 10pt;
 	margin-top: 10px;
@@ -41,7 +41,7 @@
 	padding-left: 20px;
 }
 
-header {
+.header {
 	overflow: hidden;
 }
 
@@ -62,6 +62,7 @@ nav	ul {
 	float: right;
 	padding-top: 80px;
 
+
 	
 }
 nav li{
@@ -74,7 +75,7 @@ nav li{
 	display: inline;
 	float: left;
 	margin-left: 0px;
-	padding-left: 0px;
+	padding-right: 10px;
 	margin-right: 10px;
 }
 
@@ -102,12 +103,13 @@ a {
 a:hover, .selected{
 	color: black;
 }
-.quoteArea .button {
+.startButton {
 	background: #bebebe;
-	padding: 6px;
+	margin-left: 10px;
+/*	padding: 6px;*/
 }
-.quoteArea .button:hover{
-	color: white;
+.startButton:hover{
+	background: #395B73;
 }
 
 .quoteArea ul{
@@ -124,9 +126,7 @@ a:hover, .selected{
 .quoteArea select{
 	margin-bottom: 10px;
 }
-.quoteArea button{
-	margin-left: 20px;
-}
+
 
 /*
 *************
@@ -157,7 +157,7 @@ a:hover, .selected{
 }
 
 .quote-field #cost {
-	width: 100px;
+	width: 120px;
 }
 
 .quote-field #height {
