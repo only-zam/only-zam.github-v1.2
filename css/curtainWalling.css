@@ -102,13 +102,13 @@ a {
 a:hover, .selected{
 	color: black;
 }
-.quoteArea .button {
+/*.quoteArea .button {
 	background: #bebebe;
 	padding: 6px;
 }
 .quoteArea .button:hover{
 	color: white;
-}
+}*/
 
 .quoteArea ul{
 	padding-top: 10px;
@@ -124,9 +124,9 @@ a:hover, .selected{
 .quoteArea select{
 	margin-bottom: 10px;
 }
-.quoteArea button{
+/*.quoteArea button{
 	margin-left: 20px;
-}
+}*/
 
 /*
 *************
@@ -141,8 +141,18 @@ a:hover, .selected{
 	list-style-type: disc;
 	margin-left: 10px;
 	line-height: 10px;
-
 }
+
+.startButton {
+	background: #bebebe;
+	margin-left: 10px;
+/*	padding: 6px;*/
+}
+.startButton:hover{
+	background: #395B73;
+}
+
+
 /*
 *************
 *=Measurements entry

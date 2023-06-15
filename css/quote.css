@@ -101,8 +101,10 @@ a {
 	color: #7e7e7e;
 }
 a:hover, .selected{
-	color: black;
+	color: #395B73;
+	font-weight: bold;
 }
+
 .startButton {
 	background: #bebebe;
 	margin-left: 10px;
@@ -158,16 +160,6 @@ a:hover, .selected{
 
 .quote-field #cost {
 	width: 120px;
-}
-
-.quote-field #height {
-	width: 100px;
-	background: #ccccc9;
-}
-
-.quote-field #width {
-	width: 105px;
-	background: #ccccc9;
 }
 
 

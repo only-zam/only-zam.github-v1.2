@@ -1,8 +1,8 @@
 
 
 const windowTypes = {
-    height: () => parseFloat(document.getElementById("heightId").value),
-    width: () => parseFloat(document.getElementById("widthId").value),
+  height: () => parseFloat(document.getElementById("heightId").value),
+  width: () => parseFloat(document.getElementById("widthId").value),
 
 
   type1: {  //2 sliding panels w/o fx.
@@ -565,7 +565,7 @@ function start() {
   : alert("Please enter valid type"); 
 
 
-
+console.log("jambP for type1 is:", windowTypes.type1.jambP());
 /*
 console.log("jambP for type17 is:", windowTypes.type17.jambP());
 console.log("sillP for type17 is:", windowTypes.type17.sillP());
