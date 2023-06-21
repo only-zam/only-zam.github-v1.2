@@ -8,7 +8,7 @@ const windowTypesCW = {
       return divs+1
       },
 
-        type1: {
+        type1: { //2 Vertical Divisions "3Vents-cw"
 
       heightFx: 1000,
       widthFx: () => (windowTypesCW.width()/2),
@@ -29,7 +29,7 @@ const windowTypesCW = {
       installation: () => windowTypesCW.type1.totals() * configCWall.installPc,
 
       },
-        type2: {
+        type2: { //2 Vertical Divisions "6Vents-cw"
 
       heightFx: 1000,
       widthFx: () => (windowTypesCW.width()/2),
@@ -50,7 +50,7 @@ const windowTypesCW = {
 
       },
 
-        type3: {
+        type3: { //3 Vertical Divisions "3Vents-cw"
 
       heightFx: 1000,
       widthFx: () => (windowTypesCW.width()/3),
@@ -71,7 +71,7 @@ const windowTypesCW = {
       installation: () => windowTypesCW.type3.totals() * configCWall.installPc,
 
       },
-        type4: {
+        type4: { //3 Vertical Divisions "6Vents-cw"
 
       heightFx: 1000,
       widthFx: () => (windowTypesCW.width()/3),

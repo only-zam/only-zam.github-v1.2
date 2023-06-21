@@ -4,7 +4,7 @@
 *************
 */
 .container_24{
-	/*background: #bebebe;*/
+/*	background: #bebebe;*/
 	font-family: helvetica, futura, arial;
 	font-size: 10pt;
 	margin-top: 10px;
@@ -35,13 +35,13 @@
 	font-size: 16px;
 	font-weight: normal;
 	position: relative;
-	top: 170px;
+	top: 186px;
 	background: rgba(0, 0, 0, .5);
 	width: 400px;
 	padding-left: 20px;
 }
 
-header {
+.header {
 	overflow: hidden;
 }
 
@@ -62,6 +62,7 @@ nav	ul {
 	float: right;
 	padding-top: 80px;
 
+
 	
 }
 nav li{
@@ -70,6 +71,14 @@ nav li{
 	margin-right: 10px;
 
 }
+.selectSeries li {
+	display: inline;
+	float: left;
+	margin-left: 0px;
+	padding-right: 10px;
+	margin-right: 10px;
+}
+
 
 /*
 *************
@@ -81,7 +90,7 @@ nav li{
 	font-size: 14pt;
 	color: #395B73;	
 }
-#enterMeasurements, #selectionArea, #previewArea {
+#previewArea {
 	border-top: 1px solid #d1d1d1;
 	padding-top: 10px;
 } 
@@ -92,14 +101,17 @@ a {
 	color: #7e7e7e;
 }
 a:hover, .selected{
-	color: black;
+	color: #395B73;
+	font-weight: bold;
 }
-.quoteArea .button {
+
+.startButton {
 	background: #bebebe;
-	padding: 6px;
+	margin-left: 10px;
+/*	padding: 6px;*/
 }
-.quoteArea .button:hover{
-	color: white;
+.startButton:hover{
+	background: #395B73;
 }
 
 .quoteArea ul{
@@ -116,9 +128,7 @@ a:hover, .selected{
 .quoteArea select{
 	margin-bottom: 10px;
 }
-.quoteArea button{
-	margin-left: 20px;
-}
+
 
 /*
 *************
@@ -149,26 +159,16 @@ a:hover, .selected{
 }
 
 .quote-field #cost {
-	width: 100px;
-}
-
-.quote-field #height {
-	width: 100px;
-	background: #ccccc9;
-}
-
-.quote-field #width {
-	width: 105px;
-	background: #ccccc9;
+	width: 120px;
 }
 
 
-.grid_10 img{
+/*.grid_10 img{
 	margin-left: 35px;
 	background: #ccccc9;
 	border-radius:20px;
 
-}
+}*/
 .type #choseType {
 	width: 110px;
 
@@ -181,7 +181,9 @@ footer{
 }
 footer p{
 	padding-top: 10px;
-	padding-left: 20px;
+	margin: auto;
+	text-align: center;
+	height: 100px;
 	border-top: 1px solid #d1d1d1;
 	margin-bottom: 20px;
 }
@@ -206,10 +208,16 @@ footer p{
 *=Content
 *************
 */
-.mainContent {
+#mainContent {
 	border-top: 1px solid #d1d1d1;
-	padding-top: 10px;
+/*	margin-top: 340px;*/
 	line-height: 30px;
+
+}
+.mainContent p{
+/*	padding-top: 10px;*/
+	margin-bottom: 20px;
+
 }
 /*.grid_18{
 	border-top: 30px solid #d1d1d1;
@@ -284,7 +292,6 @@ footer p{
 .secNav ul {
 	float: left;
 	padding-top: 10px;
-	margin-bottom: 10px;
 
 	
 }
@@ -293,6 +300,13 @@ footer p{
 	padding-left: 10px;
 	margin-right: 0px;
 }
+
+
+.propertiesArea label:after {
+  content: "*";
+  color: red;
+}
+
 
 
 
