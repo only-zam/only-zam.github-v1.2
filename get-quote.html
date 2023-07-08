@@ -10,6 +10,13 @@
 	<link rel="stylesheet" type="text/css" href="css/960_24_col.css">
 
 	<title>Capital Aluminium and Glass</title>
+
+	<script type="text/javascript">
+		window.onload = function() {
+ 		typeGallery();
+		};
+
+	</script>
 	
 	
 
@@ -49,121 +56,173 @@
 		</div>
 	</div> </br>
 
-	<div class="quoteArea">
+		<div class="quoteArea">
 		<div class="grid_8" id="enterMeasurements">
 					<h1>Get Quote</h1> 
 
 					<p>-Choose your profile series and enter both height and width</p>
-					<p>Choose your profile series and enter both height</p>
+					<p>-Different rates apply for each of the two series</p>
+					<p>-Press start after you've chosen all desired properties</p>
 
-		<ul class="selectSeries">
-			<li><a href="index.html" class="selected"> 4002 chn Series </a></li>
-			<li><a href="index - DevCanon.html"> 16040 Canon </a></li>
-		</ul> </br>
+				<ul class="selectSeries">
+					<li><a href="index.html" class="selected"> 4002 chn Series </a></li>
+					<li><a href="index - DevCanon.html"> 16040 Canon Series</a></li>
+				</ul>
 
 			<div class="quote-field">
 					<ul>
-						<li><label>Enter Height(mm):*</label> </br>
+						<li><label>Enter Height(mm):*</label>
 						<input type="text" id="heightId"></li>
-						<li><label>Enter Width(mm):*</label> </br>
+						<li><label>Enter Width(mm):*</label>
 						<input type="text" id="widthId"></li>
 					</ul>
-				
-					<button onclick="start()">Start</button>
-					<input type="text" id="cost"/>
-			
-			</div>
+					
+						<button class="startButton" onclick="start()">Start</button>
+						<input type="text" id="cost"/> 			
+				</div>
 		</div>
 			
-		<div class="grid_8">
+		<div class="grid_8" id="selectionArea">
 			<h2>Configure properties</h2>
 			<div class="propertiesArea">
 				<ul>
-
 						<li><label>Select Profile colour:</label>
-						<select id="profileColour">
-						<option value="white">White</option>
-						<option value="black">Black</option>
-						<option value="silver">Silver</option>
-						<option value="brown">Brown</option>
-						<option value="champagne">Champagne</option>
-						<option value="grey">Grey</option>
-						</select>
+							<select id="profileColour">
+							<option value="white">White</option>
+							<option value="black">Black</option>
+							<option value="silver">Silver</option>
+							<option value="brown">Brown</option>
+							<option value="champagne">Champagne</option>
+							<option value="grey">Grey</option>
+							</select>
+						</li>
 
 
 						<li><label>Select Number of panels:</label>
-						<select id="noOfPanels" onchange="typeGallery()">
-						<option value="2">2 panels</option>
-						<option value="3">3 panels</option>
-						<option value="4">4 panels</option>
-						</select>
+							<select id="noOfPanels" onchange="typeGallery()">
+							<option value="2">2 panels</option>
+							<option value="3">3 panels</option>
+							<option value="4">4 panels</option>
+							</select>
+						</li>
 
-						
+							
 
 						<li><label>With/Without Fixed partition:</label>
-						<select id="fixedPartition" onchange="typeGallery()">
-						<option value="noPartition">No Fixed Partition</option>
-						<option value="doubleFixed">Top & Bottom</option>
-						<option value="fixedTop">Fixed Top</option>
-						<option value="fixedBottom">Fixed Bottom</option>
-						<option value="openAbleTop">Openable Top</option>
-
-						</select>
+							<select id="fixedPartition" onchange="typeGallery()">
+							<option value="noPartition">No Fixed Partition</option>
+							<option value="doubleFixed">Top & Bottom</option>
+							<option value="fixedTop">Fixed Top</option>
+							<option value="fixedBottom">Fixed Bottom</option>
+							<option value="openAbleTopFxBtm">Openable Top 1</option>
+							<option value="openAbleTop">Openable Top 2</option>
+							</select>
+						</li>
 
 						<li><label>Select Glass Type:</label>
-						<select id="glassType">						
-						<option value="clear">clear</option>
-						<option value="oneWay">oneWay</option>
-						<option value="tinted">tinted</option>
-						<option value="obscured">obscured</option>
-						</select>
+							<select id="glassType">						
+							<option value="clear">clear</option>
+							<option value="oneWay">oneWay</option>
+							<option value="tinted">tinted</option>
+							<option value="obscured">obscured</option>
+							</select>
+						</li>
 
 						<li><label>Select Glass thickness:</label>
-						<select id="glassThickness">						
-						<option value="4mm">4mm</option>
-						<option value="5mm">5mm</option>
-						<option value="6mm">6mm</option>
-						<option value="8mm">8mm</option>
-						<option value="3+3mmLam">3+3mm Laminated</option>
-						<option value="4+4mmLam">4+4mm Laminated</option>
-						<option value="5+5mmLam">5+5mm Laminated</option>
-						<option value="6mmTuff">6mm Toughened</option>
-						<option value="8mmTuff">8mm Toughened</option>
-
-						</select>
-					</ul>
-			</div>	
+							<select id="glassThickness">						
+							<option value="4mm">4mm</option>
+							<option value="5mm">5mm</option>
+							<option value="6mm">6mm</option>
+							<option value="8mm">8mm</option>
+							<option value="3+3mmLam">3+3mm Laminated</option>
+							<option value="4+4mmLam">4+4mm Laminated</option>
+							<option value="5+5mmLam">5+5mm Laminated</option>
+							<option value="6mmTuff">6mm Toughened</option>
+							<option value="8mmTuff">8mm Toughened</option>
+							</select>
+						</li>
+				</ul>
+			</div>
+			
+					<button id="addToCartBtn"> Add to Cart</button>
 
 		</div>
 			
 		<div class="grid_8" id="previewArea">
-			<img src="img/type-1.png" id="img-type" width="300px" height="300px"> </br> </br> </br>
+			<img src="img/type-1.png" id="img-type" width="300px" height="300px">
 			
 
-		</div>	
-	</div> </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+		</div>
+		</div>
+	<!-- </div> </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br> -->
 	
 
 	<div class="mainContent">
-		<div class="grid_17">
-			<img src="img/capital-banner.png" width="620px">
-			<h3>WINDOWS, DOORS AND MORE</h3>
-			<h1>Supply and Instalation of High Quality Aluminium Sliding Windows and Doors for both Residential and Commercial Aluminium Projecs</h1>
-			<p>We're an established team of dedicated industry professionals operating in Kenya and East-Africa at large. We specialize in the supply and installaion of sliding/swing Aluminium doors, Sliding/Hung Aluminium windows, shop fronts and displays, glass main entrance, curtain walls, structural glazing, pergola glazing, canopy, shower cubicles and enclosures for both residential and commercial premises. We operate on a mantra of quality, elegance, professionalism and simplicity.</p> </br>
-			<p>We aim at making all of our clients' work easier as evidenced by this website's functionality and it's ability to quote. We understand the hassle of getting accurate alluminium windows and door quotations and that the process often takes days or even weeks. It is in the spirit of solving this problem that we provide a functionality that narrows down this process to just minutes. 
-			Through this platform, aspiring property owners, Architects, Engineers, Quantity Surveyors and basically anyone with an interest in Aluminium Windows can get a highly accurate quote for their glazing projects</p></br>
-			<p>Capital Aluminium and Glass welcomes projects of any scale and challenges, and guarantees to deliver the very best value for your investment and superb service to its clients.</p></br>
-			
-			<div class="read-more">
-			<a href="our-services.html">FIND OUT MORE</a>
-			</div>
-			<div class="our-projects">
-			<a href="projects.html">VIEW OUR PROJECTS</a>		
+		<div class="categories grid_18"> 
 
-			</div>			
+			<h3>WINDOWS, DOORS AND MORE</h3>
+				<h4>Categories/Properties</h4>
+
+
+
+			<div class="category-0">
+				<div class="grid_5">
+				<h3>Two-panels-no-fx</h3>
+				<a href="get-quote.html?noOfPanels=2&fixedPartition=noPartition"> <img src="img/aux-img/two-panel-0.png"> </a>
+				</div>
+
+				<div class="grid_5">
+				<h3>Two-panels-fx-top</h3>
+				<a href="get-quote.html?noOfPanels=2&fixedPartition=fixedTop"> <img src="img/aux-img/two-panel-1.png"> </a>
+				</div>	
+
+				<div class="grid_5">
+				<h3>two-panels-dbl-fx</h3>
+				<a href="get-quote.html?noOfPanels=2&fixedPartition=doubleFixed"> <img src="img/aux-img/two-panel-2.png"> </a>		
+
+				</div>
+			</div>
+
+			<div class="category-1">
+				<div class="grid_5">
+				<h3>Three-panels-no-fx</h3>
+				<a href="get-quote.html?noOfPanels=3&fixedPartition=noPartition"> <img src="img/aux-img/three-panel-0.png"> </a>
+				</div>
+
+				<div class="grid_5">
+				<h3>Three-panels-fx-top</h3>		
+				<a href="get-quote.html?noOfPanels=3&fixedPartition=fixedTop"> <img src="img/aux-img/three-panel-1.png"> </a>
+				</div>	
+
+				<div class="grid_5">
+				<h3>Three-panels-dbl-fx</h3>		
+				<a href="get-quote.html?noOfPanels=3&fixedPartition=doubleFixed"> <img src="img/aux-img/three-panel-2.png"> </a>
+				</div>
+
+			</div>
+
+			<div class="category-2">
+				<div class="grid_5">
+				<h3>bath-window</h3>
+				<a href="types/bathWindows.html"> <img src="img/aux-img/bath-0.png"> </a>
+				</div>
+
+				<div class="grid_5">
+				<h3>bath-window</h3>		
+				<a href="types/bathWindows.html"> <img src="img/aux-img/bath-1.png"> </a>
+				</div>	
+
+				<div class="grid_5">
+				<h3>Three-panels-dbl-fx</h3>		
+				<a href="types/bathWindows.html"> <img src="img/aux-img/bath-2.png"> </a>
+				</div>
+
+			</div>
+
 		</div>
 
-		<div class="grid_7" id="whatWeDo">
+
+		<div class="grid_6" id="whatWeDo">
 			<h1>What we do</h1>
 			<p>We offer a broad range of glazing solutions. Some of them include:</p>
 			<ul>
@@ -209,27 +268,27 @@
 						<ul class="media-icons">
 
 							<li>
-								<a href="#"><img src="img/icons/fa-twitter.png"> </a>
+								<a href="https://twitter.com/CapitalAllu" target="_blank"><img src="img/icons/fa-twitter.png"> </a>
 							</li>
 
 							<li>
-								<a href="#"><img src="img/icons/fa-instagram.png"> </a>
+								<a href="instagram.com/capital.builders_" target="_blank"><img src="img/icons/fa-instagram.png"> </a>
 							</li>
 
 							<li>
-								<a href="#"><img src="img/icons/fa-tiktok.png"> </a>
+								<a href="https://www.tiktok.com/@capital.builders" target="_blank"><img src="img/icons/fa-tiktok.png"> </a>
 							</li>
 
 							<li>
-								<a href="#"><img src="img/icons/fa-facebook.png"> </a>
+								<a href="https://www.facebook.com/profile.php?id=100086908637188&mibextid=ZbWKwL"><img src="img/icons/fa-facebook.png" target="_blank"> </a>
 							</li>
 
 							<li>
-								<a href="#"><img src="img/icons/fa-whatsApp.png"> </a>
+								<a href="https://api.whatsapp.com/send/?phone=254724275877&text&app_absent=0"><img src="img/icons/fa-whatsApp.png" target="_blank"> </a>
 							</li>
 
 							<li>
-								<a href="#"><img src="img/icons/fa-telegram.png"> </a>
+								<a href="https://t.me/CapitalHoldings" target="_blank"><img src="img/icons/fa-telegram.png"> </a>
 							</li>
 
 						</ul>						
@@ -256,7 +315,10 @@
 </body>
 
 
+
 	<script src="config.js"></script>
 
 	<script src="index - Dev - Test.js"></script>
+
+	<script src="categories.js"></script>
 </html>
