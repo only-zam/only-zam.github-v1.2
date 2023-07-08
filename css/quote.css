@@ -176,17 +176,56 @@ a:hover, .selected{
 #whatWeDo {
 	float: right;
 }
-footer{
-	clear: both;
+footer *{
+/*	clear: both;*/
+box-sizing: border-box;
+padding: 0;
+margin: 0;
 }
-footer p{
+.footer-text .txt{
+	display: flex;
 	padding-top: 10px;
 	margin: auto;
-	text-align: center;
+	justify-content: space-between;
 	height: 100px;
 	border-top: 1px solid #d1d1d1;
 	margin-bottom: 20px;
+	
+
 }
+.footer-text .txt h4{
+	font-weight: normal;
+}
+.footer3 .container {
+	display: flex;
+	justify-content: space-between;
+	gap: 2em;
+}
+.footer3 .menu li {
+	display: inline-block;
+	margin: 1em;
+	text-align: center;
+}
+.footer3 .menu a {
+	transition: 0.3s;
+	font-weight: 300;
+}
+
+.footer3 .media-icons li {
+	display: inline-block;
+	margin: 6px;
+	text-align: center;
+}
+
+.footer3 .media-icons img {
+	width: 30px; 
+	height:30px;
+}
+	
+/*}
+.footer3 .menu a:hover {
+
+}*/
 
 /*
 *************
