@@ -506,61 +506,61 @@ function start2() {
   }*/
 
   numberOfPanels === "2" & withWithoutPartition === "noPartition" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type1.totals())+(windowTypesCanon.type1.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type1.installation()))
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type1.totals())+(windowTypesCanon.type1.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type1.installation()),console.log("Glass for this window: ", windowTypesCanon.type1.glass()))
   
   : numberOfPanels === "2" && (withWithoutPartition === "fixedTop" || withWithoutPartition === "fixedBottom") ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type2.totals())+(windowTypesCanon.type2.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type2.installation()))
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type2.totals())+(windowTypesCanon.type2.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type2.installation()),console.log("Glass for this window: ", windowTypesCanon.type2.glass()))
 
   : numberOfPanels === "2" && withWithoutPartition === ("doubleFixed") ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type3.totals())+(windowTypesCanon.type3.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type3.installation()))
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type3.totals())+(windowTypesCanon.type3.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type3.installation()),console.log("Glass for this window: ", windowTypesCanon.type3.glass()))
 
   : numberOfPanels === "3" && withWithoutPartition === ("noPartition") ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type4.totals())+(windowTypesCanon.type4.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type4.installation()))
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type4.totals())+(windowTypesCanon.type4.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type4.installation()),console.log("Glass for this window: ", windowTypesCanon.type4.glass()))
 
   : numberOfPanels === "3" & (withWithoutPartition === "fixedTop" || withWithoutPartition === "fixedBottom") ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type5.totals())+(windowTypesCanon.type5.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type5.installation()))
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type5.totals())+(windowTypesCanon.type5.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type5.installation()),console.log("Glass for this window: ", windowTypesCanon.type5.glass()))
   
   : numberOfPanels === "3" & withWithoutPartition === "doubleFixed"?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type6.totals())+(windowTypesCanon.type6.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type6.installation()))
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type6.totals())+(windowTypesCanon.type6.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type6.installation()),console.log("Glass for this window: ", windowTypesCanon.type6.glass()))
   
   : numberOfPanels === "4" & withWithoutPartition === "noPartition" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type7.totals())+(windowTypesCanon.type7.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type7.installation()))
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type7.totals())+(windowTypesCanon.type7.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type7.installation()),console.log("Glass for this window: ", windowTypesCanon.type7.glass()))
   
   : numberOfPanels === "4" & (withWithoutPartition === "fixedTop" || withWithoutPartition === "fixedBottom") ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type8.totals())+(windowTypesCanon.type8.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type8.installation()))
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type8.totals())+(windowTypesCanon.type8.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type8.installation()),console.log("Glass for this window: ", windowTypesCanon.type8.glass()))
   
   : numberOfPanels === "4" & withWithoutPartition === "doubleFixed" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type9.totals())+(windowTypesCanon.type9.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type9.installation()))
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type9.totals())+(windowTypesCanon.type9.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type9.installation()),console.log("Glass for this window: ", windowTypesCanon.type9.glass()))
 
   : numberOfPanels === "2" & withWithoutPartition === "openAbleTopFxBtm" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type10.totals())+(windowTypesCanon.type10.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type10.installation()))
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type10.totals())+(windowTypesCanon.type10.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type10.installation()),console.log("Glass for this window: ", windowTypesCanon.type10.glass()))
 
   : numberOfPanels === "3" & withWithoutPartition === "openAbleTopFxBtm" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type11.totals())+(windowTypesCanon.type11.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type11.installation()))
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type11.totals())+(windowTypesCanon.type11.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type11.installation()),console.log("Glass for this window: ", windowTypesCanon.type11.glass()))
 
   : numberOfPanels === "4" & withWithoutPartition === "openAbleTopFxBtm" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type12.totals())+(windowTypesCanon.type12.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type12.installation()))
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type12.totals())+(windowTypesCanon.type12.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type12.installation()),console.log("Glass for this window: ", windowTypesCanon.type12.glass()))
 
   : bathWType === "singlePanel" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type13.totals())+(windowTypesCanon.type13.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type13.installation()))
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type13.totals())+(windowTypesCanon.type13.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type13.installation()),console.log("Glass for this window: ", windowTypesCanon.type13.glass()))
   
   : bathWType === "doublePanel" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type14.totals())+(windowTypesCanon.type14.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type14.installation()))
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type14.totals())+(windowTypesCanon.type14.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type14.installation()),console.log("Glass for this window: ", windowTypesCanon.type14.glass()))
   
   : topHungType === "doublePanel" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type14.totals())+(windowTypesCanon.type14.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type14.installation()))
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type14.totals())+(windowTypesCanon.type14.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type14.installation()),console.log("Glass for this window: ", windowTypesCanon.type14.glass()))
 
   : topHungType === "singlePanel" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type13.totals())+(windowTypesCanon.type13.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type13.installation()))
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type13.totals())+(windowTypesCanon.type13.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type13.installation()),console.log("Glass for this window: ", windowTypesCanon.type13.glass()))
  
   : topHungType === "customLight" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type15.totals())+(windowTypesCanon.type15.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type15.installation()))
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type15.totals())+(windowTypesCanon.type15.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type15.installation()),console.log("Glass for this window: ", windowTypesCanon.type15.glass()))
 
   : topHungType === "centerHung" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type16.totals())+(windowTypesCanon.type16.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type16.installation()))
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type16.totals())+(windowTypesCanon.type16.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type16.installation()),console.log("Glass for this window: ", windowTypesCanon.type16.glass()))
 
   : numberOfPanels === "3" & withWithoutPartition === "openAbleTop" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type17.totals())+(windowTypesCanon.type17.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type17.installation()))
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type17.totals())+(windowTypesCanon.type17.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type17.installation()),console.log("Glass for this window: ", windowTypesCanon.type17.glass()))
 
   : alert("Please enter valid type"); 
 
