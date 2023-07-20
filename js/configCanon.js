@@ -173,7 +173,7 @@ function updateGlassConfig(selectedType, selectedThickness) {
     case "oneWay":
             switch (selectedThickness) {
               case "4mm":
-                setGlassPrice(150);
+                setGlassPrice(170);
                 break;
               case "5mm":
                 setGlassPrice(200);
@@ -204,7 +204,7 @@ function updateGlassConfig(selectedType, selectedThickness) {
     case "tinted":
             switch (selectedThickness) {
               case "4mm":
-                setGlassPrice(160);
+                setGlassPrice(170);
                 break;
               case "5mm":
                 setGlassPrice(200);

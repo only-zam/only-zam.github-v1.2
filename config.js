@@ -12,7 +12,7 @@ const config = {
     "lock": 650,
     "guiders": 30,
     "tube": 550,
-    "butterFly": 390,
+    "butterFly": 400,
     "jambCover": 300,
     "singleHeader": 350,
     "divider": 480,
@@ -46,7 +46,7 @@ const config = {
       case "brown":
         setOuterFrameProfileProperties(550);
         setInnerFrameProfileProperties(480);
-        setButterFlyProperties(390);
+        setButterFlyProperties(400);
         setJambCoverProperties(300);
         setProjectedProperties(640);
         setProjectBiddingProperties(300);

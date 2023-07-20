@@ -1,0 +1,93 @@
+Considering this js code:
+
+const windowTypesCanon = {
+    height: () => parseFloat(document.getElementById("heightId").value),
+    width: () => parseFloat(document.getElementById("widthId").value),
+
+
+  type1: {  //2 sliding panels w/o fx.
+    jambP: () => (((windowTypesCanon.height()+250)*2)/1000)*configCanon.jambP, //jambP
+    interLock: () => (((windowTypesCanon.height()+250)*2)/1000)*configCanon.interLock, //interLock
+    lockSection: () => (((windowTypesCanon.height()+250)*2)/1000)*configCanon.lockSection, //lockSection
+    topBottom: () =>(((windowTypesCanon.width()+250)*2)/1000)*configCanon.topBottom, //topBottom
+
+
+    totals: () => {
+    const values = Object.values(windowTypesCanon.type1);
+    const functions = values.filter(value => typeof value === "function" && value !== windowTypesCanon.type1.totals && value !== windowTypesCanon.type1.installation);
+    return functions.reduce((sum, func) => sum + func(), 0);
+    },
+    installation: () => windowTypesCanon.type1.totals() * configCanon.installPc, 
+    
+  },
+  type2: {  //2 sliding panels single fx 400mm   
+  height1: () => (windowTypesCanon.height()-400),
+  heightFx: 400,  
+
+    jambP: () => (((windowTypesCanon.height()+250)*2)/1000)*configCanon.jambP, //jambP
+    interLock: () => (((windowTypesCanon.type2.height1()+250)*2)/1000)*configCanon.interLock, //interLock
+    lockSection: () => (((windowTypesCanon.type2.height1()+250)*2)/1000)*configCanon.lockSection, //lockSection
+    topBottom: () =>(((windowTypesCanon.width()+250)*2)/1000)*configCanon.topBottom, //topBottom
+
+
+    totals: () => {
+    const values = Object.values(windowTypesCanon.type2);
+    const functions = values.filter(value => typeof value === "function" && value !== windowTypesCanon.type2.totals && value !== windowTypesCanon.type2.installation && value !== windowTypesCanon.type2.height1 && value !== windowTypesCanon.type2.heightFx);
+    return functions.reduce((sum, func) => sum + func(), 0);
+    },
+    installation: () => windowTypesCanon.type2.totals() * configCanon.installPc,
+  },
+
+  type3: { //2 sliding panels double fx 400mm each.
+  height1: () => (windowTypesCanon.height()-700),
+  heightFx: 400,  
+
+    jambP: () => (((windowTypesCanon.height()+250)*2)/1000)*configCanon.jambP, //jambP
+    interLock: () => (((windowTypesCanon.type3.height1()+250)*2)/1000)*configCanon.interLock, //interLock
+    lockSection: () => (((windowTypesCanon.type3.height1()+250)*2)/1000)*configCanon.lockSection, //lockSection
+    topBottom: () =>(((windowTypesCanon.width()+250)*2)/1000)*configCanon.topBottom, //topBottom
+
+    totals: () => {
+    const values = Object.values(windowTypesCanon.type3);
+    const functions = values.filter(value => typeof value === "function" && value !== windowTypesCanon.type3.totals && value !== windowTypesCanon.type3.installation && value !== windowTypesCanon.type3.height1 && value !== windowTypesCanon.type3.heightFx);
+    return functions.reduce((sum, func) => sum + func(), 0);
+    },
+    installation: () => windowTypesCanon.type3.totals() * configCanon.installPc,
+  },
+
+  type4: {  //3 sliding panels w/o fx.
+    jambP: () => (((windowTypesCanon.height()+250)*2)/1000)*configCanon.jambP, //jambP
+    interLock: () => (((windowTypesCanon.height()+250)*4)/1000)*configCanon.interLock, //interLock
+    lockSection: () => (((windowTypesCanon.height()+250)*2)/1000)*configCanon.lockSection, //lockSection
+    topBottom: () =>(((windowTypesCanon.width()+250)*2)/1000)*configCanon.topBottom, //topBottom
+
+
+    totals: () => {
+    const values = Object.values(windowTypesCanon.type4);
+    const functions = values.filter(value => typeof value === "function" && value !== windowTypesCanon.type4.totals && value !== windowTypesCanon.type4.installation);
+    return functions.reduce((sum, func) => sum + func(), 0);
+    },
+    installation: () => windowTypesCanon.type4.totals() * configCanon.installPc,
+  },
+};
+
+
+function start2() {
+
+   numberOfPanels === "2" & withWithoutPartition === "noPartition" ?
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type1.totals())+(windowTypesCanon.type1.installation())).toFixed(0))
+  
+  : numberOfPanels === "2" && (withWithoutPartition === "fixedTop" || withWithoutPartition === "fixedBottom") ?
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type2.totals())+(windowTypesCanon.type2.installation())).toFixed(0))
+
+  : numberOfPanels === "2" && withWithoutPartition === ("doubleFixed") ?
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type3.totals())+(windowTypesCanon.type3.installation())).toFixed(0))
+
+  : numberOfPanels === "3" && withWithoutPartition === ("noPartition") ?
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type4.totals())+(windowTypesCanon.type4.installation())).toFixed(0))
+
+  : alert("Please enter valid type");
+
+
+The start2() functions calls either object type1, 2, 3 or 4 based on user input which is selected within the ternary if statements. How would I console.log all the arrow functions of the object that is currently selected in the ternary if statements.
+Should this be done inside the objects, inside the start2() function or outside of both?

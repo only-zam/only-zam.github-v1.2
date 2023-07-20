@@ -56,8 +56,8 @@ const windowTypesCanon = {
   },
 
   type3: { //2 sliding panels double fx 400mm each.
-  height1: () => (windowTypesCanon.height()-700),
-  heightFx: 400,  
+  height1: () => (windowTypesCanon.height()-800),
+  heightFx: 800,  
 
     jambP: () => (((windowTypesCanon.height()+250)*2)/1000)*configCanon.jambP, //jambP
     interLock: () => (((windowTypesCanon.type3.height1()+250)*2)/1000)*configCanon.interLock, //interLock
@@ -67,7 +67,7 @@ const windowTypesCanon = {
     sillP: () =>((windowTypesCanon.width()+250)/1000)*configCanon.sillP, //sillP
     glass: () => ((windowTypesCanon.height()/304.8)*(windowTypesCanon.width()/304.8))*configCanon.glass, //glass
     tube: ()=>((((windowTypesCanon.width()+250)*2)+(windowTypesCanon.type3.heightFx*2))/1000)*configCanon.tube, //tube
-    butterFly: () =>(((windowTypesCanon.width()*4)/1000)+(windowTypesCanon.type3.heightFx*8)/1000)*configCanon.butterFly, //butterFly
+    butterFly: () =>(((windowTypesCanon.width()*4)/1000)+(windowTypesCanon.type3.heightFx*4)/1000)*configCanon.butterFly, //butterFly
     jambCover: () => ((windowTypesCanon.type3.heightFx*4)/1000)*configCanon.jambCover, //jC
     rubber: () =>(((windowTypesCanon.height()*4)+(windowTypesCanon.width()*6))/1000)*configCanon.rubber,//rubber
     woolFile: () =>((windowTypesCanon.height()*4)/1000)*configCanon.woolFile, //woolFile
@@ -136,8 +136,8 @@ const windowTypesCanon = {
   },
 
   type6: {  //3 sliding panels double fx 400mm each.
-  height1: () => (windowTypesCanon.height()-700),
-  heightFx: 400,  
+  height1: () => (windowTypesCanon.height()-800),
+  heightFx: 800,  
 
     jambP: () => (((windowTypesCanon.height()+250)*2)/1000)*configCanon.jambP, //jambP
     interLock: () => (((windowTypesCanon.type6.height1()+250)*4)/1000)*configCanon.interLock, //interLock
@@ -146,8 +146,8 @@ const windowTypesCanon = {
     headerP: () =>((windowTypesCanon.width()+250)/1000)*configCanon.headerP, //headerP
     sillP: () =>((windowTypesCanon.width()+250)/1000)*configCanon.sillP, //sillP
     glass: () => ((windowTypesCanon.height()/304.8)*(windowTypesCanon.width()/304.8))*configCanon.glass, //glass
-    tube: ()=>((((windowTypesCanon.width()+250)*2)+(windowTypesCanon.type6.heightFx*4))/1000)*configCanon.tube, //tube
-    butterFly: () =>(((windowTypesCanon.width()*4)/1000)+(windowTypesCanon.type6.heightFx*12)/1000)*configCanon.butterFly, //butterFly
+    tube: ()=>((((windowTypesCanon.width()+250)*2)+(windowTypesCanon.type6.heightFx*2))/1000)*configCanon.tube, //tube
+    butterFly: () =>(((windowTypesCanon.width()*4)/1000)+(windowTypesCanon.type6.heightFx*6)/1000)*configCanon.butterFly, //butterFly
     jambCover: () => ((windowTypesCanon.type6.heightFx*4)/1000)*configCanon.jambCover, //jC
     rubber: () =>(((windowTypesCanon.height()*6)+(windowTypesCanon.width()*6))/1000)*configCanon.rubber,//rubber
     woolFile: () =>((windowTypesCanon.height()*4)/1000)*configCanon.woolFile, //woolFile
@@ -423,8 +423,8 @@ const windowTypesCanon = {
   },
 
     type17: {  //3 sliding panels with awning top and wo fx bottom
-  height1: () => (windowTypesCanon.height()*0.75),
-  heightFx: () => (windowTypesCanon.height()*0.25),
+  height1: () => (windowTypesCanon.height()*0.7),
+  heightFx: () => (windowTypesCanon.height()*0.3),
 
     jambP: () => (((windowTypesCanon.height()+250)*2)/1000)*configCanon.jambP, //jambP
     interLock: () => (((windowTypesCanon.type17.height1()+250)*4)/1000)*configCanon.interLock, //interLock
@@ -434,7 +434,7 @@ const windowTypesCanon = {
     sillP: () =>((windowTypesCanon.width()+250)/1000)*configCanon.sillP, //sillP
     glass: () => ((windowTypesCanon.height()/304.8)*(windowTypesCanon.width()/304.8))*configCanon.glass, //glass
     tube: ()=>(((windowTypesCanon.width()+250)+(windowTypesCanon.type17.heightFx()*2))/1000)*configCanon.tube, //tube
-    butterFly: () =>((((windowTypesCanon.width()*0.8)/1000)+(windowTypesCanon.type17.heightFx()*2))/1000)*configCanon.butterFly, //butterFly
+    butterFly: () =>((((windowTypesCanon.width()*2)/1000)+(windowTypesCanon.type17.heightFx()*2))/1000)*configCanon.butterFly, //butterFly
     jambCover: () => ((windowTypesCanon.type17.heightFx()*2)/1000)*configCanon.jambCover, //jC
     rubber: () =>(((windowTypesCanon.height()*6)+(windowTypesCanon.width()*4))/1000)*configCanon.rubber,//rubber
     woolFile: () =>((windowTypesCanon.height()*4)/1000)*configCanon.woolFile, //woolFile
@@ -463,6 +463,8 @@ const windowTypesCanon = {
 
 
 function start2() {
+
+
 
      if (document.getElementById("noOfPanels") != null) {
         numberOfPanels = document.getElementById("noOfPanels").value;
@@ -505,17 +507,49 @@ function start2() {
     return;
   }*/
 
+
+
   numberOfPanels === "2" & withWithoutPartition === "noPartition" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type1.totals())+(windowTypesCanon.type1.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type1.installation()),console.log("Glass for this window: ", windowTypesCanon.type1.glass()))
-  
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type1.totals())+(windowTypesCanon.type1.installation())).toFixed(0), 
+
+    (
+        console.log("Selected Object: type1"),
+        Object.entries(windowTypesCanon.type1)
+          .filter(([key, value]) => typeof value === "function")
+          .forEach(([key, func]) => console.log(`Type1 - ${key}:`, func())))
+    )
+
   : numberOfPanels === "2" && (withWithoutPartition === "fixedTop" || withWithoutPartition === "fixedBottom") ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type2.totals())+(windowTypesCanon.type2.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type2.installation()),console.log("Glass for this window: ", windowTypesCanon.type2.glass()))
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type2.totals())+(windowTypesCanon.type2.installation())).toFixed(0),
+
+        (
+        console.log("Selected Object: type2"),
+        Object.entries(windowTypesCanon.type2)
+          .filter(([key, value]) => typeof value === "function")
+          .forEach(([key, func]) => console.log(`Type2 - ${key}:`, func())))
+
+
+      )
 
   : numberOfPanels === "2" && withWithoutPartition === ("doubleFixed") ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type3.totals())+(windowTypesCanon.type3.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type3.installation()),console.log("Glass for this window: ", windowTypesCanon.type3.glass()))
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type3.totals())+(windowTypesCanon.type3.installation())).toFixed(0),
+          (
+        console.log("Selected Object: type3"),
+        Object.entries(windowTypesCanon.type3)
+          .filter(([key, value]) => typeof value === "function")
+          .forEach(([key, func]) => console.log(`Type3 - ${key}:`, func())))
+
+    )
 
   : numberOfPanels === "3" && withWithoutPartition === ("noPartition") ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type4.totals())+(windowTypesCanon.type4.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type4.installation()),console.log("Glass for this window: ", windowTypesCanon.type4.glass()))
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type4.totals())+(windowTypesCanon.type4.installation())).toFixed(0),
+
+          (
+        console.log("Selected Object: type4"),
+        Object.entries(windowTypesCanon.type4)
+          .filter(([key, value]) => typeof value === "function")
+          .forEach(([key, func]) => console.log(`Type4 - ${key}:`, func())))
+    )
 
   : numberOfPanels === "3" & (withWithoutPartition === "fixedTop" || withWithoutPartition === "fixedBottom") ?
     (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type5.totals())+(windowTypesCanon.type5.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type5.installation()),console.log("Glass for this window: ", windowTypesCanon.type5.glass()))
@@ -567,6 +601,8 @@ function start2() {
 
 
 
+
+
 /*console.log("jambP for type17 is:", windowTypesCanon.type17.jambP());
 console.log("sillP for type17 is:", windowTypesCanon.type17.sillP());
 console.log("headerP for type17 is:", windowTypesCanon.type17.headerP());
@@ -594,7 +630,7 @@ console.log("projectBidding for type17 is:", windowTypesCanon.type17.projectBidd
 
 
 
-  }
+  }   //start2() End
 
 function typeGallery(){
 
@@ -628,14 +664,14 @@ function typeGallery(){
 
 
 
-     numberOfPanels === "2" & withWithoutPartition === "noPartition" ?
+  numberOfPanels === "2" & withWithoutPartition === "noPartition" ?
     (document.getElementById("img-type").src="img/type-1.png")
 
-    : numberOfPanels === "2" && (withWithoutPartition === "fixedTop" || withWithoutPartition === "fixedBottom") ?
+  : numberOfPanels === "2" && (withWithoutPartition === "fixedTop" || withWithoutPartition === "fixedBottom") ?
      (document.getElementById("img-type").src="img/type-3.png")
 
 
-    : numberOfPanels === "2" && withWithoutPartition === ("doubleFixed") ?
+  : numberOfPanels === "2" && withWithoutPartition === ("doubleFixed") ?
      (document.getElementById("img-type").src="img/type-5.png")
 
 
@@ -693,5 +729,116 @@ function typeGallery(){
 
 
 
+}   //typeGallery() end
+
+
+// Define a function to load the window cart from local storage
+function loadWindowCart() {
+  const cartData = localStorage.getItem("windowCart");
+  if (cartData) {
+    return JSON.parse(cartData);
+  } else {
+    return {};
+  }
 }
 
+// Define a function to save the window cart to local storage
+function saveWindowCart(windowCart) {
+  localStorage.setItem("windowCart", JSON.stringify(windowCart));
+}
+
+
+
+// Initialize the window cart by loading from local storage
+const windowCart = loadWindowCart();
+
+// Function to add window to cart
+function addToCart() {
+  // Retrieve user input values
+  const height = parseFloat(document.getElementById("heightId").value);
+  const width = parseFloat(document.getElementById("widthId").value);
+
+  // Retrieve other input values for selected options
+  const numberOfPanels = document.getElementById("noOfPanels")?.value || null;
+  const withWithoutPartition = document.getElementById("fixedPartition")?.value || null;
+  const bathWType = document.getElementById("bathWindowType")?.value || null;
+  const topHungType = document.getElementById("topHungWindowType")?.value || null;
+  const profileColour = document.getElementById("profileColour")?.value || null;
+  const glassType = document.getElementById("glassType")?.value || null;
+  const glassThickness = document.getElementById("glassThickness")?.value || null;
+
+
+
+
+
+  // Create a window object using the selected options and the measurements
+  const selectedOptions = {
+    height: height,
+    width: width,
+    numberOfPanels: numberOfPanels,
+    withWithoutPartition: withWithoutPartition,
+    bathWType: bathWType,
+    topHungType: topHungType,
+    profileColour: profileColour,
+    glassType: glassType,
+    glassThickness: glassThickness,
+    // Add other selected options based on user input
+
+  };
+
+
+
+  // Identify the corresponding window type based on selected options
+  let windowCost;
+
+  // Logic to determine the window type based on selected options
+
+  if (numberOfPanels === "3" && (withWithoutPartition === "fixedTop" || withWithoutPartition === "fixedBottom")) {
+    windowCost=((windowTypesCanon.type5.totals()) + (windowTypesCanon.type5.installation())).toFixed(0)
+
+
+  } else if (numberOfPanels === "3" && withWithoutPartition === "doubleFixed") {
+    windowCost=((windowTypesCanon.type6.totals()) + (windowTypesCanon.type6.installation())).toFixed(0)
+
+
+  } else if (numberOfPanels === "4" && withWithoutPartition === "noPartition") {
+    windowCost=((windowTypesCanon.type7.totals()) + (windowTypesCanon.type7.installation())).toFixed(0)
+
+  }
+
+  // Generate a unique identifier for the window
+  const windowId = generateWindowId();
+
+  
+
+  // Add the selected options, window type, and cost to the windowCart object
+    windowCart[windowId] = {
+    options: selectedOptions,
+    cost: windowCost,
+    };
+
+  // Save the updated window cart to local storage
+  saveWindowCart(windowCart);
+
+  // Clear the input fields for the next window
+  document.getElementById("heightId").value = "";
+  document.getElementById("widthId").value = "";
+  // Clear other input fields as needed
+
+  console.log(windowCart);
+}
+
+// Initialize a counter variable
+let windowCounter = 1;
+
+// Function to generate a unique identifier for the window
+function generateWindowId() {
+  // Generate the windowId using the counter
+  const windowId = `WIN${windowCounter.toString().padStart(4, "0")}`;
+  
+  // Increment the counter for the next window
+  windowCounter++;
+  
+  // Return the unique window identifier
+  return windowId;
+}

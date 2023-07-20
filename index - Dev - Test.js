@@ -423,8 +423,8 @@ const windowTypes = {
   },
 
     type17: {  //3 sliding panels with awning top and wo fx bottom
-  height1: () => (windowTypes.height()*0.75),
-  heightFx: () => (windowTypes.height()*0.25),
+  height1: () => (windowTypes.height()*0.7),
+  heightFx: () => (windowTypes.height()*0.3),
 
     jambP: () => (((windowTypes.height()+250)*2)/1000)*config.jambP, //jambP
     interLock: () => (((windowTypes.type17.height1()+250)*4)/1000)*config.interLock, //interLock
@@ -434,7 +434,7 @@ const windowTypes = {
     sillP: () =>((windowTypes.width()+250)/1000)*config.sillP, //sillP
     glass: () => ((windowTypes.height()/304.8)*(windowTypes.width()/304.8))*config.glass, //glass
     tube: ()=>(((windowTypes.width()+250)+(windowTypes.type17.heightFx()*2))/1000)*config.tube, //tube
-    butterFly: () =>((((windowTypes.width()*0.8)/1000)+(windowTypes.type17.heightFx()*2))/1000)*config.butterFly, //butterFly
+    butterFly: () =>((((windowTypes.width()*2)/1000)+(windowTypes.type17.heightFx()*6))/1000)*config.butterFly, //butterFly
     jambCover: () => ((windowTypes.type17.heightFx()*2)/1000)*config.jambCover, //jC
     rubber: () =>(((windowTypes.height()*6)+(windowTypes.width()*4))/1000)*config.rubber,//rubber
     woolFile: () =>((windowTypes.height()*4)/1000)*config.woolFile, //woolFile
