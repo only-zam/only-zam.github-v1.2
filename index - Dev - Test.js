@@ -547,6 +547,9 @@ function start() {
   : bathWType === "doublePanel" ?
     (document.getElementById("cost").value=" Ksh. "+((windowTypes.type14.totals())+(windowTypes.type14.installation())).toFixed(0), console.log("installation: ", windowTypes.type14.installation()))
   
+  : bathWType === "centerHung" ?
+    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type16.totals())+(windowTypes.type16.installation())).toFixed(0), console.log("installation: ", windowTypes.type16.installation()))
+
   : topHungType === "doublePanel" ?
     (document.getElementById("cost").value=" Ksh. "+((windowTypes.type14.totals())+(windowTypes.type14.installation())).toFixed(0), console.log("installation: ", windowTypes.type14.installation()))
 
@@ -671,6 +674,9 @@ function typeGallery(){
 
   : bathWType === "doublePanel" ?
     (document.getElementById("img-type").src="../img/type-13.png")
+
+  : bathWType === "centerHung" ?
+    (document.getElementById("img-type").src="../img/type-15.png")
 
   : topHungType === "doublePanel" ?
     (document.getElementById("img-type").src="../img/type-14.png")

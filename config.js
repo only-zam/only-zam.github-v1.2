@@ -247,10 +247,10 @@ function updateGlassConfig(selectedType, selectedThickness) {
                 setGlassPrice(180);
                 break;
               case "6mm":
-                setGlassPrice(200);
+                setGlassPrice(220);
                 break;
               case "8mm":
-                setGlassPrice(220);
+                setGlassPrice(260);
                 break;
            }
       break;

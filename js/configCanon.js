@@ -41,13 +41,13 @@ const profileDropdownBox2 = document.getElementById("profileColour");
       case "silver":
       case "brown":
         setSillProperties(850);
-        setOutterFrameProperties(620);
-        setInterlockProperties(775);
-        setLockSectionProperties(570);
+        setOutterFrameProperties(750);
+        setInterlockProperties(750);
+        setLockSectionProperties(590);
         setTopBottomProperties(740)
-        setButterFlyProperties(400);
+        setButterFlyProperties(510);
         setJambCoverProperties(300);
-        setProjectedProperties(490);
+        setProjectedProperties(750);
         setProjectBiddingProperties(335);
         setSingleHeaderProperties(350);
       break;
@@ -56,13 +56,13 @@ const profileDropdownBox2 = document.getElementById("profileColour");
       case "grey":
       case "champagne":
         setSillProperties(885);
-        setOutterFrameProperties(646);
-        setInterlockProperties(785);
-        setLockSectionProperties(575);
+        setOutterFrameProperties(792);
+        setInterlockProperties(770);
+        setLockSectionProperties(620);
         setTopBottomProperties(795)
-        setButterFlyProperties(450);
+        setButterFlyProperties(520);
         setJambCoverProperties(340);
-        setProjectedProperties(540);
+        setProjectedProperties(750);
         setProjectBiddingProperties(395);
         setSingleHeaderProperties(395);
       break;
