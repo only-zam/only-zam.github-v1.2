@@ -1,10 +1,10 @@
 const configCanon = {
-    "jambP": 620,
-    "interLock": 775,
-    "lockSection": 570,
-    "topBottom": 740,
-    "headerP": 620,
-    "sillP": 850,
+    "jambP": 780,
+    "interLock": 840,
+    "lockSection": 620,
+    "topBottom": 800,
+    "headerP": 680,
+    "sillP": 866,
     "glass": 130,
     "rubber": 50,
     "woolFile": 100,
@@ -12,14 +12,14 @@ const configCanon = {
     "lock": 650,
     "guiders": 30,
     "tube": 620,
-    "butterFly": 400,
+    "butterFly": 520,
     "jambCover": 300,
     "singleHeader": 350,
     "divider": 480,
     "installPc": 0.275,
-    "pOutter": 490,
-    "pInner": 490,
-    "sideArms": 840,
+    "pOutter": 650,
+    "pInner": 750,
+    "sideArms": 900,
     "projectHandle": 600,
     "projectBidding": 335,
   };
@@ -36,14 +36,15 @@ const profileDropdownBox2 = document.getElementById("profileColour");
   console.log("Initial value of configCanon.jambP:", configCanon.jambP);
 
   function updateProfileConfig(selectedValue) {
+
   switch (selectedValue) {
       case "white":
       case "silver":
       case "brown":
-        setSillProperties(850);
-        setOutterFrameProperties(750);
-        setInterlockProperties(750);
-        setLockSectionProperties(590);
+        setSillProperties(920);
+        setOutterFrameProperties(680);
+        setInterlockProperties(840);
+        setLockSectionProperties(620);
         setTopBottomProperties(740)
         setButterFlyProperties(510);
         setJambCoverProperties(300);
@@ -52,14 +53,15 @@ const profileDropdownBox2 = document.getElementById("profileColour");
         setSingleHeaderProperties(350);
       break;
 
+
       case "black":
       case "grey":
       case "champagne":
-        setSillProperties(885);
-        setOutterFrameProperties(792);
-        setInterlockProperties(770);
+        setSillProperties(870);
+        setOutterFrameProperties(720);
+        setInterlockProperties(850);
         setLockSectionProperties(620);
-        setTopBottomProperties(795)
+        setTopBottomProperties(800)
         setButterFlyProperties(520);
         setJambCoverProperties(340);
         setProjectedProperties(750);
