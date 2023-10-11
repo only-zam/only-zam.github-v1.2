@@ -1,10 +1,10 @@
 const configCanon = {
-    "jambP": 780,
-    "interLock": 840,
+    "jambP": 820,
+    "interLock": 780,
     "lockSection": 620,
-    "topBottom": 800,
+    "topBottom": 780,
     "headerP": 680,
-    "sillP": 866,
+    "sillP": 820,
     "glass": 130,
     "rubber": 50,
     "woolFile": 100,
@@ -17,7 +17,7 @@ const configCanon = {
     "singleHeader": 350,
     "divider": 480,
     "installPc": 0.275,
-    "pOutter": 650,
+    "pOutter": 750,
     "pInner": 750,
     "sideArms": 900,
     "projectHandle": 600,
@@ -41,15 +41,15 @@ const profileDropdownBox2 = document.getElementById("profileColour");
       case "white":
       case "silver":
       case "brown":
-        setSillProperties(920);
-        setOutterFrameProperties(680);
-        setInterlockProperties(840);
+        setSillProperties(800);
+        setOutterFrameProperties(820);
+        setInterlockProperties(770);
         setLockSectionProperties(620);
-        setTopBottomProperties(740)
+        setTopBottomProperties(780)
         setButterFlyProperties(510);
         setJambCoverProperties(300);
         setProjectedProperties(750);
-        setProjectBiddingProperties(335);
+        setProjectBiddingProperties(300);
         setSingleHeaderProperties(350);
       break;
 
@@ -57,15 +57,15 @@ const profileDropdownBox2 = document.getElementById("profileColour");
       case "black":
       case "grey":
       case "champagne":
-        setSillProperties(870);
-        setOutterFrameProperties(720);
-        setInterlockProperties(850);
+        setSillProperties(820);
+        setOutterFrameProperties(820);
+        setInterlockProperties(780);
         setLockSectionProperties(620);
         setTopBottomProperties(800)
         setButterFlyProperties(520);
         setJambCoverProperties(340);
         setProjectedProperties(750);
-        setProjectBiddingProperties(395);
+        setProjectBiddingProperties(300);
         setSingleHeaderProperties(395);
       break;
 
