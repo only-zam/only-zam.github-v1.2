@@ -1,24 +1,24 @@
 const config = {
-    "jambP": 550,
-    "interLock": 480,
-    "lockSection": 480,
-    "topBottom": 480,
-    "headerP": 550,
-    "sillP": 550,
+    "jambP": 580,
+    "interLock": 500,
+    "lockSection": 500,
+    "topBottom": 500,
+    "headerP": 580,
+    "sillP": 580,
     "glass": 130,
     "rubber": 50,
     "woolFile": 100,
-    "rollers": 150,
+    "rollers": 200,
     "lock": 650,
-    "guiders": 30,
-    "tube": 550,
-    "butterFly": 400,
+    "guiders": 49,
+    "tube": 580,
+    "butterFly": 430,
     "jambCover": 300,
-    "singleHeader": 350,
+    "singleHeader": 400,
     "divider": 480,
     "installPc": 0.275,
-    "pOutter": 490,
-    "pInner": 490,
+    "pOutter": 640,
+    "pInner": 640,
     "sideArms": 840,
     "projectHandle": 600,
     "projectBidding": 335,
@@ -44,23 +44,25 @@ const config = {
       case "white":
       case "silver":
       case "brown":
-        setOuterFrameProfileProperties(550);
-        setInnerFrameProfileProperties(480);
-        setButterFlyProperties(400);
+        setOuterFrameProfileProperties(580);
+        setInnerFrameProfileProperties(500);
+        setButterFlyProperties(490);
         setJambCoverProperties(300);
-        setProjectedProperties(640);
+        setProjectedInnerProperties(620);
+        setProjectedOuterProperties(640);
         setProjectBiddingProperties(300);
-        setSingleHeaderProperties(350);
-        setCurtainWallingProperties(870);
+        setSingleHeaderProperties(400);
+        setCurtainWallingProperties(890);
       break;
 
       case "black":
       case "grey":
         setOuterFrameProfileProperties(600);
-        setInnerFrameProfileProperties(510);
-        setButterFlyProperties(450);
+        setInnerFrameProfileProperties(540);
+        setButterFlyProperties(490);
         setJambCoverProperties(320);
-        setProjectedProperties(660);
+        setProjectedInnerProperties(640);
+        setProjectedOuterProperties(640);
         setProjectBiddingProperties(320);
         setSingleHeaderProperties(420);
         setSingleHeaderProperties(420);
@@ -68,14 +70,15 @@ const config = {
       break;
 
       case "champagne":
-        setOuterFrameProfileProperties(575);
-        setInnerFrameProfileProperties(490);
-        setButterFlyProperties(420);
-        setJambCoverProperties(300);
-        setProjectedProperties(640);
-        setProjectBiddingProperties(300);
-        setSingleHeaderProperties(400);
-        setCurtainWallingProperties(890);
+        setOuterFrameProfileProperties(600);
+        setInnerFrameProfileProperties(540);
+        setButterFlyProperties(490);
+        setJambCoverProperties(320);
+        setProjectedInnerProperties(640);
+        setProjectedOuterProperties(640);
+        setProjectBiddingProperties(320);
+        setSingleHeaderProperties(420);
+        setCurtainWallingProperties(920);
       break;
 
       default:
@@ -103,10 +106,13 @@ const config = {
         config.jambCover = value;
     }
 
-    function setProjectedProperties(value) {
+    function setProjectedInnerProperties(value) {
         config.pInner = value;
+    }
+
+    function setProjectedOutterProperties(value) {
         config.pOutter = value;
-    }    
+    }
 
     function setProjectBiddingProperties(value) {
         config.projectBidding = value;
