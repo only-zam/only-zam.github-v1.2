@@ -16,6 +16,7 @@ const windowTypesCW = {
       curtainWallingP: () => ((((windowTypesCW.height()+600)*3)+((windowTypesCW.width()+250)*windowTypesCW.verticalDivisions()))/1000)*configCWall.curtainWallingP, //curtainWallingP
       glass: () => ((windowTypesCW.height()/304.8)*(windowTypesCW.width()/304.8))*configCWall.glass, //glass
       curtainWallingPInner: () => (((windowTypesCW.type1.heightFx*6)+(windowTypesCW.type1.widthFx()*6))/1000)*configCWall.curtainWallingPInner, //curtainWallingPInner
+      curtainWallingPOuter: () => (((windowTypesCW.type1.heightFx*6)+(windowTypesCW.type1.widthFx()*6))/1000)*configCWall.curtainWallingPOuter, //curtainWallingPOuter
       sideArms: () => 3*configCWall.sideArms, //sideArms
       doubleTape: () => ((((windowTypesCW.verticalDivisions()*1.7)*windowTypesCW.width())+(windowTypesCW.height()*4))/1000)*configCWall.doubleTape, //doubleTape
       silicone: () => 10*configCWall.silicone, //silicone
@@ -37,6 +38,7 @@ const windowTypesCW = {
       curtainWallingP: () => ((((windowTypesCW.height()+600)*3)+((windowTypesCW.width()+250)*windowTypesCW.verticalDivisions()))/1000)*configCWall.curtainWallingP, //curtainWallingP
       glass: () => ((windowTypesCW.height()/304.8)*(windowTypesCW.width()/304.8))*configCWall.glass, //glass
       curtainWallingPInner: () => (((windowTypesCW.type2.heightFx*12)+(windowTypesCW.type2.widthFx()*12))/1000)*configCWall.curtainWallingPInner, //curtainWallingPInner
+      curtainWallingPOuter: () => (((windowTypesCW.type2.heightFx*12)+(windowTypesCW.type2.widthFx()*12))/1000)*configCWall.curtainWallingPOuter, //curtainWallingPOuter
       sideArms: () => 6*configCWall.sideArms, //sideArms
       doubleTape: () => ((((windowTypesCW.verticalDivisions()*1.7)*windowTypesCW.width())+(windowTypesCW.height()*4))/1000)*configCWall.doubleTape, //doubleTape
       silicone: () => 10*configCWall.silicone, //silicone
@@ -59,6 +61,7 @@ const windowTypesCW = {
       curtainWallingP: () => ((((windowTypesCW.height()+600)*4)+((windowTypesCW.width()+250)*windowTypesCW.verticalDivisions()))/1000)*configCWall.curtainWallingP, //curtainWallingP
       glass: () => ((windowTypesCW.height()/304.8)*(windowTypesCW.width()/304.8))*configCWall.glass, //glass
       curtainWallingPInner: () => (((windowTypesCW.type3.heightFx*6)+(windowTypesCW.type3.widthFx()*6))/1000)*configCWall.curtainWallingPInner, //curtainWallingPInner
+      curtainWallingPOuter: () => (((windowTypesCW.type3.heightFx*6)+(windowTypesCW.type3.widthFx()*6))/1000)*configCWall.curtainWallingPOuter, //curtainWallingPOuter
       sideArms: () => 3*configCWall.sideArms, //sideArms
       doubleTape: () => ((((windowTypesCW.verticalDivisions()*1.7)*windowTypesCW.width())+(windowTypesCW.height()*6))/1000)*configCWall.doubleTape, //doubleTape
       silicone: () => 10*configCWall.silicone, //silicone
@@ -81,6 +84,7 @@ const windowTypesCW = {
       curtainWallingP: () => ((((windowTypesCW.height()+600)*4)+((windowTypesCW.width()+250)*windowTypesCW.verticalDivisions()))/1000)*configCWall.curtainWallingP, //curtainWallingP
       glass: () => ((windowTypesCW.height()/304.8)*(windowTypesCW.width()/304.8))*configCWall.glass, //glass
       curtainWallingPInner: () => (((windowTypesCW.type4.heightFx*12)+(windowTypesCW.type4.widthFx()*12))/1000)*configCWall.curtainWallingPInner, //curtainWallingPInner
+      curtainWallingPOuter: () => (((windowTypesCW.type4.heightFx*12)+(windowTypesCW.type4.widthFx()*12))/1000)*configCWall.curtainWallingPOuter, //curtainWallingPOuter
       sideArms: () => 6*configCWall.sideArms, //sideArms
       doubleTape: () => ((((windowTypesCW.verticalDivisions()*1.7)*windowTypesCW.width())+(windowTypesCW.height()*6))/1000)*configCWall.doubleTape, //doubleTape
       silicone: () => 10*configCWall.silicone, //silicone
@@ -133,10 +137,12 @@ curtainWallDesign === "type1-cw" & numberOfVents === "3Vents-cw" ?
 
 console.log("CWP for type3 is:", windowTypesCW.type3.curtainWallingP());
 console.log("CWI for type3 is:", windowTypesCW.type3.curtainWallingPInner());
+console.log("CWO for type3 is:", windowTypesCW.type3.curtainWallingPOuter());
 console.log("Glass for type3 is:", windowTypesCW.type3.glass());
 console.log("DT for type3 is:", windowTypesCW.type3.doubleTape());
 console.log("Sillicone for type3 is:", windowTypesCW.type3.silicone());
 console.log("SA for type3 is:", windowTypesCW.type3.sideArms());
+console.log("Toals for type3 is:", windowTypesCW.type3.totals());
 
   }
 

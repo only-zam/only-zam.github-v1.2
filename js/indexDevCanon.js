@@ -455,6 +455,42 @@ const windowTypesCanon = {
     installation: () => windowTypesCanon.type17.totals() * configCanon.installPc,
   },
 
+      type18: {   //Fixed Light vertical
+    pOutter: () => ((((windowTypesCanon.height()+100)*2)+((windowTypesCanon.width()+100)*2))/1000)*configCanon.pOutter, //pOutter
+    pInner: () => ((((windowTypesCanon.height()+100)*0.6)+((windowTypesCanon.width()+100)*2))/1000)*configCanon.pInner, //pInner
+    pBidding: () => ((((windowTypesCanon.height()+100)*2)+((windowTypesCanon.width()+100)*6))/1000)*configCanon.projectBidding, //pBidding
+    sideArms: () => 2*configCanon.sideArms, //sideArms 
+    rubber: () => (((windowTypesCanon.height()*2)+(windowTypesCanon.width()*6))/1000)*configCanon.rubber,//rubber
+    projectHandle: () => 1*configCanon.projectHandle, //projectHandle
+    glass: () => ((windowTypesCanon.height()/304.8)*(windowTypesCanon.width()/304.8))*configCanon.glass, //glass
+    woolFile: () =>(((windowTypesCanon.height()*2)+(windowTypesCanon.width()*2))/1000)*configCanon.woolFile, //woolFile
+
+    totals: () => {
+    const values = Object.values(windowTypesCanon.type18);
+    const functions = values.filter(value => typeof value === "function" && value !== windowTypesCanon.type18.totals && value !== windowTypesCanon.type18.installation);
+    return functions.reduce((sum, func) => sum + func(), 0);
+    },
+    installation: () => windowTypesCanon.type18.totals() * configCanon.installPc,
+  },
+
+      type19: {   //Fixed Light no vent
+    pOutter: () => ((((windowTypesCanon.height()+100)*2)+((windowTypesCanon.width()+100)*2))/1000)*configCanon.pOutter, //pOutter
+    // pInner: () => ((((windowTypesCanon.height()+100)*0.6)+((windowTypesCanon.width()+100)*2))/1000)*configCanon.pInner, //pInner
+    pBidding: () => ((((windowTypesCanon.height()+100)*2)+((windowTypesCanon.width()+100)*2))/1000)*configCanon.projectBidding, //pBidding
+    sideArms: () => 2*configCanon.sideArms, //sideArms 
+    rubber: () => (((windowTypesCanon.height()*2)+(windowTypesCanon.width()*2))/1000)*configCanon.rubber,//rubber
+    // projectHandle: () => 1*configCanon.projectHandle, //projectHandle
+    glass: () => ((windowTypesCanon.height()/304.8)*(windowTypesCanon.width()/304.8))*configCanon.glass, //glass
+    woolFile: () =>(((windowTypesCanon.height()*2)+(windowTypesCanon.width()*2))/1000)*configCanon.woolFile, //woolFile
+
+    totals: () => {
+    const values = Object.values(windowTypesCanon.type19);
+    const functions = values.filter(value => typeof value === "function" && value !== windowTypesCanon.type19.totals && value !== windowTypesCanon.type19.installation);
+    return functions.reduce((sum, func) => sum + func(), 0);
+    },
+    installation: () => windowTypesCanon.type19.totals() * configCanon.installPc,
+  },
+
 
 
 
@@ -595,6 +631,12 @@ function start2() {
 
   : numberOfPanels === "3" & withWithoutPartition === "openAbleTop" ?
     (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type17.totals())+(windowTypesCanon.type17.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type17.installation()),console.log("Glass for this window: ", windowTypesCanon.type17.glass()))
+
+  : topHungType === "fixedLight" ?
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type18.totals())+(windowTypesCanon.type18.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type18.installation()))
+
+  : topHungType === "fixedLight2" ?
+    (document.getElementById("cost").value=" Ksh. "+((windowTypesCanon.type19.totals())+(windowTypesCanon.type19.installation())).toFixed(0), console.log("installation: ", windowTypesCanon.type19.installation()))
 
   : alert("Please enter valid type"); 
 

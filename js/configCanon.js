@@ -1,25 +1,25 @@
 const configCanon = {
     "jambP": 820,
-    "interLock": 780,
+    "interLock": 775,
     "lockSection": 620,
     "topBottom": 780,
-    "headerP": 680,
-    "sillP": 820,
+    "headerP": 620,
+    "sillP": 810,
     "glass": 130,
     "rubber": 50,
     "woolFile": 100,
     "rollers": 200,
     "lock": 650,
-    "guiders": 49,
-    "tube": 620,
+    "guiders": 50,
+    "tube": 970,
     "butterFly": 520,
     "jambCover": 300,
-    "singleHeader": 350,
-    "divider": 480,
+    "singleHeader": 400,
+    "divider": 620,
     "installPc": 0.275,
-    "pOutter": 750,
+    "pOutter": 600,
     "pInner": 750,
-    "sideArms": 900,
+    "sideArms": 840,
     "projectHandle": 600,
     "projectBidding": 335,
   };
@@ -42,31 +42,39 @@ const profileDropdownBox2 = document.getElementById("profileColour");
       case "silver":
       case "brown":
         setSillProperties(800);
-        setOutterFrameProperties(820);
+        setJambProperties(810);
+        setHeaderProperties(610);
+        setTubeProperties(960);
+        // setOutterFrameProperties(820);
         setInterlockProperties(770);
-        setLockSectionProperties(620);
-        setTopBottomProperties(780)
+        setLockSectionProperties(610);
+        setTopBottomProperties(790)
         setButterFlyProperties(510);
-        setJambCoverProperties(300);
-        setProjectedProperties(750);
-        setProjectBiddingProperties(300);
-        setSingleHeaderProperties(350);
+        setJambCoverProperties(340);
+        setProjectedOutterProperties(590);
+        setProjectedInnerProperties(740);
+        setProjectBiddingProperties(335);
+        setSingleHeaderProperties(400);
       break;
 
 
       case "black":
       case "grey":
       case "champagne":
-        setSillProperties(820);
-        setOutterFrameProperties(820);
+        setSillProperties(810);
+        setJambProperties(820);
+        setHeaderProperties(620);
+        setTubeProperties(970);
+        // setOutterFrameProperties(820);
         setInterlockProperties(780);
         setLockSectionProperties(620);
-        setTopBottomProperties(800)
+        setTopBottomProperties(800);
         setButterFlyProperties(520);
         setJambCoverProperties(340);
-        setProjectedProperties(750);
-        setProjectBiddingProperties(300);
-        setSingleHeaderProperties(395);
+        setProjectedOutterProperties(600);
+        setProjectedInnerProperties(750);
+        setProjectBiddingProperties(335);
+        setSingleHeaderProperties(400);
       break;
 
       default:
@@ -78,10 +86,16 @@ const profileDropdownBox2 = document.getElementById("profileColour");
       configCanon.sillP = value;
     }
 
-    function setOutterFrameProperties(value) {
-        configCanon.jambP = value;
-        configCanon.headerP = value;
-        configCanon.tube = value;
+    function setJambProperties(value) {
+      configCanon.jambP = value;
+    }
+
+    function setHeaderProperties(value) {
+      configCanon.headerP = value;
+    }
+
+    function setTubeProperties(value) {
+      configCanon.tube = value;
     }
 
     function setInterlockProperties(value) {
@@ -104,10 +118,13 @@ const profileDropdownBox2 = document.getElementById("profileColour");
         configCanon.jambCover = value;
     }
 
-    function setProjectedProperties(value) {
-        configCanon.pInner = value;
+    function setProjectedOutterProperties(value) {
         configCanon.pOutter = value;
-    }    
+    }   
+
+    function setProjectedInnerProperties(value) {
+        configCanon.pInner = value;
+    }  
 
     function setProjectBiddingProperties(value) {
         configCanon.projectBidding = value;
