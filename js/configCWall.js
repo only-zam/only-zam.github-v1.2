@@ -12,7 +12,8 @@ const configCWall = {
     "sideArms": 840,
     "projectHandle": 600,
     "curtainWallingP": 750,
-    "curtainWallingPInner": 750,
+    "curtainWallingPInner": 590,
+    "curtainWallingPOuter": 530,
     "doubleTape": 60,
     "silicone": 460,
   };
@@ -22,9 +23,9 @@ const configCWall = {
   profileDropdownBox.addEventListener("change", function() {
   console.log("Selected profile colour changed to:", profileDropdownBox.value);
   updateProfileConfig(profileDropdownBox.value);
-  console.log("configCWall.jambP updated to:", configCWall.jambP);
-  console.log("configCWall.lockSection updated to:", configCWall.lockSection);
-  console.log("configCWall.butterFly updated to:", configCWall.butterFly);
+  console.log("configCWall.curtainWallingP updated to:", configCWall.curtainWallingP);
+  console.log("configCWall.curtainWallingPInner updated to:", configCWall.curtainWallingPInner);
+  console.log("configCWall.curtainWallingPOuter updated to:", configCWall.curtainWallingPOuter);
 });
   console.log("Initial value of configCWall.jambP:", configCWall.jambP);
 
@@ -34,18 +35,24 @@ const configCWall = {
       case "silver":
       case "brown":
         setButterFlyProperties(390);
-        setCurtainWallingProperties(750);
+        setCurtainWallingPProperties(740);
+        setCurtainWallingInnerProperties(580);
+        setCurtainWallingOuterProperties(520);
       break;
 
       case "black":
       case "grey":
         setButterFlyProperties(450);
-        setCurtainWallingProperties(780);
+        setCurtainWallingPProperties(750);
+        setCurtainWallingInnerProperties(590);
+        setCurtainWallingOuterProperties(530);
       break;
 
       case "champagne":
         setButterFlyProperties(420);
-        setCurtainWallingProperties(765);
+        setCurtainWallingPProperties(750);
+        setCurtainWallingInnerProperties(590);
+        setCurtainWallingOuterProperties(530);
       break;
 
       default:
@@ -59,9 +66,16 @@ const configCWall = {
   }
 
 
-    function setCurtainWallingProperties(value) {
+    function setCurtainWallingPProperties(value) {
         configCWall.curtainWallingP = value;
+    }
+
+    function setCurtainWallingInnerProperties(value) {
         configCWall.curtainWallingPInner = value;
+    }
+
+    function setCurtainWallingOuterProperties(value) {
+        configCWall.curtainWallingPOuter = value;
     }
 
 

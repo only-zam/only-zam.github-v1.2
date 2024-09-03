@@ -456,6 +456,54 @@ const windowTypes = {
   },
 
 
+    type18: {  //4 sliding Folding panels
+
+    topRailP: () => ((windowTypes.width()+500)/1000)*config.topRailP, //topRail
+    bottomTrackP: () => ((windowTypes.width()+500)/1000)*config.bottomTrackP, //bottomTrack
+    foldingSashP: () => ((((windowTypes.height()+250)*8)+((windowTypes.width()+250)*2))/1000)*config.foldingSashP, //foldingSash
+    foldingBeading: () =>((((windowTypes.height()+250)*8)+((windowTypes.width()+250)*2))/1000)*config.foldingBeading, //foldingBeading
+    outerFrameP: () =>(((windowTypes.height()+500)*2)/1000)*config.outerFrameP, //outerFrame
+    glass: () => ((windowTypes.height()/304.8)*(windowTypes.width()/304.8))*config.glass, //glass
+    rubber: () =>(((windowTypes.height()*8)+(windowTypes.width()*2))/1000)*config.foldingRubber,//rubber
+    woolFile: () =>(((windowTypes.height()*8)+(windowTypes.width()*2))/1000)*config.woolFile, //woolFile
+    foldingRollers: () =>2*config.foldingRollers, //rollers
+    foldingLock: () =>1*config.foldingLock, //lock
+    foldingGuiders: () =>2*config.foldingGuiders, //guiders
+    foldingHinges: () =>6*config.foldingHinges, //hinges
+
+
+    totals: () => {
+    const values = Object.values(windowTypes.type18);
+    const functions = values.filter(value => typeof value === "function" && value !== windowTypes.type18.totals && value !== windowTypes.type18.installation && value !== windowTypes.type18.height1 && value !== windowTypes.type18.heightFx);
+    return functions.reduce((sum, func) => sum + func(), 0);
+    },
+    installation: () => windowTypes.type18.totals() * config.installPc,
+  },
+
+    type19: {  //3 sliding Folding panels
+
+    topRailP: () => ((windowTypes.width()+500)/1000)*config.topRailP, //topRail
+    bottomTrackP: () => ((windowTypes.width()+500)/1000)*config.bottomTrackP, //bottomTrack
+    foldingSashP: () => ((((windowTypes.height()+250)*6)+((windowTypes.width()+250)*2))/1000)*config.foldingSashP, //foldingSash
+    foldingBeading: () =>((((windowTypes.height()+250)*6)+((windowTypes.width()+250)*2))/1000)*config.foldingBeading, //foldingBeading
+    outerFrameP: () =>(((windowTypes.height()+500)*2)/1000)*config.outerFrameP, //outerFrame
+    glass: () => ((windowTypes.height()/304.8)*(windowTypes.width()/304.8))*config.glass, //glass
+    rubber: () =>(((windowTypes.height()*6)+(windowTypes.width()*2))/1000)*config.foldingRubber,//rubber
+    woolFile: () =>(((windowTypes.height()*6)+(windowTypes.width()*2))/1000)*config.woolFile, //woolFile
+    foldingRollers: () =>1*config.foldingRollers, //rollers
+    foldingLock: () =>1*config.foldingLock, //lock
+    foldingGuiders: () =>1*config.foldingGuiders, //guiders
+    foldingHinges: () =>7*config.foldingHinges, //hinges
+
+    totals: () => {
+    const values = Object.values(windowTypes.type19);
+    const functions = values.filter(value => typeof value === "function" && value !== windowTypes.type19.totals && value !== windowTypes.type19.installation && value !== windowTypes.type19.height1 && value !== windowTypes.type19.heightFx);
+    return functions.reduce((sum, func) => sum + func(), 0);
+    },
+    installation: () => windowTypes.type19.totals() * config.installPc,
+  },
+
+
 
 
 };
@@ -565,8 +613,27 @@ function start() {
   : numberOfPanels === "3" & withWithoutPartition === "openAbleTop" ?
     (document.getElementById("cost").value=" Ksh. "+((windowTypes.type17.totals())+(windowTypes.type17.installation())).toFixed(0), console.log("installation: ", windowTypes.type17.installation()))
 
+  : numberOfPanels === "4" & withWithoutPartition === "slidingFolding" ?
+    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type18.totals())+(windowTypes.type18.installation())).toFixed(0), console.log("installation: ", windowTypes.type18.installation()))
+
+  : numberOfPanels === "3" & withWithoutPartition === "slidingFolding" ?
+    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type19.totals())+(windowTypes.type19.installation())).toFixed(0), console.log("installation: ", windowTypes.type19.installation()))
+
   : alert("Please enter valid type"); 
 
+
+// console.log("topRailP for type18 is:", windowTypes.type18.topRailP());
+// console.log("bottomTrackP for type18 is:", windowTypes.type18.bottomTrackP());
+// console.log("foldingSashP for type18 is:", windowTypes.type18.foldingSashP());
+// console.log("foldingBeading for type18 is:", windowTypes.type18.foldingBeading());
+// console.log("outerFrameP for type18 is:", windowTypes.type18.outerFrameP());
+// console.log("rubber for type18 is:", windowTypes.type18.rubber());
+// console.log("glass for type18 is:", windowTypes.type18.glass());
+// console.log("foldingRollers for type18 is:", windowTypes.type18.foldingRollers());
+// console.log("foldingLock for type18 is:", windowTypes.type18.foldingLock());
+// console.log("foldingGuiders for type18 is:", windowTypes.type18.foldingGuiders());
+// console.log("foldingHinges for type18 is:", windowTypes.type18.foldingHinges());
+// console.log("totals for type18 is:", windowTypes.type18.totals());
 
 // console.log("jambP for type1 is:", windowTypes.type1.jambP());
 /*

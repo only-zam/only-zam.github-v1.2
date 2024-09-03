@@ -1,10 +1,10 @@
 const config = {
-    "jambP": 580,
-    "interLock": 500,
-    "lockSection": 500,
-    "topBottom": 500,
-    "headerP": 580,
-    "sillP": 580,
+    "jambP": 570,
+    "interLock": 510,
+    "lockSection": 510,
+    "topBottom": 510,
+    "headerP": 570,
+    "sillP": 570,
     "glass": 130,
     "rubber": 50,
     "woolFile": 100,
@@ -17,15 +17,25 @@ const config = {
     "singleHeader": 400,
     "divider": 480,
     "installPc": 0.275,
-    "pOutter": 640,
-    "pInner": 640,
+    "pOutter": 570,
+    "pInner": 570,
     "sideArms": 840,
     "projectHandle": 600,
-    "projectBidding": 335,
+    "projectBidding": 340,
     "curtainWallingP": 870,
     "curtainWallingPInner": 750,
     "doubleTape": 60,
     "silicone": 400,
+    "topRailP": 2812,
+    "bottomTrackP": 950,
+    "foldingSashP": 1240,
+    "foldingBeading": 510,
+    "outerFrameP": 510,
+    "foldingRubber": 100,
+    "foldingRollers": 4000,
+    "foldingLock": 3000,
+    "foldingGuiders": 2000,
+    "foldingHinges": 800,
   };
 
   const profileDropdownBox = document.getElementById("profileColour");
@@ -44,39 +54,39 @@ const config = {
       case "white":
       case "silver":
       case "brown":
-        setOuterFrameProfileProperties(580);
-        setInnerFrameProfileProperties(500);
+        setOuterFrameProfileProperties(570);
+        setInnerFrameProfileProperties(510);
         setButterFlyProperties(490);
         setJambCoverProperties(300);
-        setProjectedInnerProperties(620);
-        setProjectedOuterProperties(640);
-        setProjectBiddingProperties(300);
+        setProjectedInnerProperties(570);
+        setProjectedOuterProperties(570);
+        setProjectBiddingProperties(340);
         setSingleHeaderProperties(400);
         setCurtainWallingProperties(890);
       break;
 
       case "black":
       case "grey":
-        setOuterFrameProfileProperties(600);
-        setInnerFrameProfileProperties(540);
+        setOuterFrameProfileProperties(580);
+        setInnerFrameProfileProperties(520);
         setButterFlyProperties(490);
         setJambCoverProperties(320);
-        setProjectedInnerProperties(640);
-        setProjectedOuterProperties(640);
-        setProjectBiddingProperties(320);
+        setProjectedInnerProperties(580);
+        setProjectedOuterProperties(580);
+        setProjectBiddingProperties(340);
         setSingleHeaderProperties(420);
         setSingleHeaderProperties(420);
         setCurtainWallingProperties(920);
       break;
 
       case "champagne":
-        setOuterFrameProfileProperties(600);
-        setInnerFrameProfileProperties(540);
+        setOuterFrameProfileProperties(580);
+        setInnerFrameProfileProperties(520);
         setButterFlyProperties(490);
         setJambCoverProperties(320);
-        setProjectedInnerProperties(640);
-        setProjectedOuterProperties(640);
-        setProjectBiddingProperties(320);
+        setProjectedInnerProperties(580);
+        setProjectedOuterProperties(580);
+        setProjectBiddingProperties(340);
         setSingleHeaderProperties(420);
         setCurtainWallingProperties(920);
       break;
@@ -110,7 +120,7 @@ const config = {
         config.pInner = value;
     }
 
-    function setProjectedOutterProperties(value) {
+    function setProjectedOuterProperties(value) {
         config.pOutter = value;
     }
 
@@ -163,7 +173,7 @@ function updateGlassConfig(selectedType, selectedThickness) {
                 setGlassPrice(180);
                 break;
               case "8mm":
-                setGlassPrice(210);
+                setGlassPrice(230);
                 break;
               case "3+3mmLam":
                 setGlassPrice(300);
@@ -188,13 +198,13 @@ function updateGlassConfig(selectedType, selectedThickness) {
                 setGlassPrice(150);
                 break;
               case "5mm":
-                setGlassPrice(200);
-                break;
-              case "6mm":
                 setGlassPrice(220);
                 break;
+              case "6mm":
+                setGlassPrice(250);
+                break;
               case "8mm":
-                setGlassPrice(240);
+                setGlassPrice(280);
                 break;
               case "3+3mmLam":
                 setGlassPrice(350);
@@ -222,10 +232,10 @@ function updateGlassConfig(selectedType, selectedThickness) {
                 setGlassPrice(200);
                 break;
               case "6mm":
-                setGlassPrice(220);
+                setGlassPrice(250);
                 break;
               case "8mm":
-                setGlassPrice(240);
+                setGlassPrice(280);
                 break;
               case "3+3mmLam":
                 setGlassPrice(350);
@@ -253,10 +263,10 @@ function updateGlassConfig(selectedType, selectedThickness) {
                 setGlassPrice(180);
                 break;
               case "6mm":
-                setGlassPrice(220);
+                setGlassPrice(240);
                 break;
               case "8mm":
-                setGlassPrice(260);
+                setGlassPrice(280);
                 break;
            }
       break;
